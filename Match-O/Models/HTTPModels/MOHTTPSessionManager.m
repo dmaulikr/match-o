@@ -8,7 +8,7 @@
 
 #import "MOHTTPSessionManager.h"
 
-static NSString *const AABaseURL = @"https://macho-aaguilar-ssf.c9users.io/api/";
+static NSString *const AABaseURL = @"https://macho-aaguilar-ssf.c9users.io/";
 
 @implementation MOHTTPSessionManager
 
@@ -29,10 +29,12 @@ static NSString *const AABaseURL = @"https://macho-aaguilar-ssf.c9users.io/api/"
     if(self)
     {
         self.requestSerializer = [AFJSONRequestSerializer serializer];
-        self.responseSerializer = [AFJSONResponseSerializer serializer];
+        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+       // [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+       // self.responseSerializer = [AFJSONResponseSerializer serializer];
+        
     }
     return self;
 }
-
 
 @end

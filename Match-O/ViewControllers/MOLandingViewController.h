@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LandingViewController : UIViewController
+@interface MOLandingViewController : UIViewController
 
 
 @end

@@ -6,16 +6,18 @@
 //  Copyright © 2016 Andres Aguilar. All rights reserved.
 //
 
-#import "LandingViewController.h"
+#import "MOLandingViewController.h"
+#import "MOUsersManager.h"
 
-@interface LandingViewController ()
+@interface MOLandingViewController ()
 
 @end
 
-@implementation LandingViewController
+@implementation MOLandingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [MOUsersManager sharedManager];
     // Do any additional setup after loading the view.
 }
 
@@ -27,6 +29,12 @@
 - (IBAction) loginButtonTapped:(UIButton *)sender
 {
     [sender setNeedsDisplay];
+}
+
+#pragma mark - Navigation
+- (IBAction) prepareForUnwind: (UIStoryboardSegue*)segue
+{
+    
 }
 
 @end

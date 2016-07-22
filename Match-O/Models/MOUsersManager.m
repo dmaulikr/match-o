@@ -11,6 +11,7 @@
 @interface MOUsersManager ()
 
 @property (strong, nonatomic) MOHTTPUsersManager *httpUserManager;
+@property (strong, nonatomic) MOUser *user;
 
 @end
 
@@ -27,6 +28,17 @@
     return _sharedManager;
 }
 
+- (id) init
+{
+    self = [super init];
+    if(self)
+    {
+        _user = [[MOCoreDataManager sharedManager] fetchUser];
+    }
+    
+    return self;
+}
+
 - (void) loginWithUsername:(NSString *)username password:(NSString *)password
 {
     self.httpUserManager = [[MOHTTPUsersManager alloc] init];
@@ -37,12 +49,12 @@
 #pragma mark - MOHTTPUsersDelegate methods
 - (void) usersManagerDidLogin:(NSDictionary *)response
 {
-    
+    NSLog(@"%@",response);
 }
 
 - (void)usersManagerDidFailWithError:(NSError *)error
 {
-    
+    NSLog(@"%@",error);
 }
 
 @end

@@ -22,12 +22,14 @@
 		A633F9361D18DC6900E4B215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A633F9351D18DC6900E4B215 /* Assets.xcassets */; };
 		A633F9441D18DC6A00E4B215 /* Match_OTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A633F9431D18DC6A00E4B215 /* Match_OTests.m */; };
 		A633F9511D18E16100E4B215 /* AASettingsShelf.m in Sources */ = {isa = PBXBuildFile; fileRef = A633F9501D18E16100E4B215 /* AASettingsShelf.m */; };
-		A67F8B851D1F2CC100D90825 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67F8B831D1F2CC100D90825 /* LandingViewController.m */; };
+		A67F8B851D1F2CC100D90825 /* MOLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67F8B831D1F2CC100D90825 /* MOLandingViewController.m */; };
 		A67F8B881D1F2CCD00D90825 /* PixelOperatorMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67F8B861D1F2CCD00D90825 /* PixelOperatorMono.ttf */; };
 		A67F8B891D1F2CCD00D90825 /* PixelOperatorMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A67F8B871D1F2CCD00D90825 /* PixelOperatorMono-Bold.ttf */; };
 		A67F8B8A1D1F2D4500D90825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A633F9371D18DC6900E4B215 /* LaunchScreen.storyboard */; };
 		A67F8B8D1D1F32D500D90825 /* AAJeweledButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A67F8B8C1D1F32D500D90825 /* AAJeweledButton.m */; };
 		A67F8B901D1F464B00D90825 /* UIColor+LightAndDark.m in Sources */ = {isa = PBXBuildFile; fileRef = A67F8B8F1D1F464B00D90825 /* UIColor+LightAndDark.m */; };
+		A6BA203D1D417034003037E9 /* MOLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BA203C1D417034003037E9 /* MOLoginViewController.m */; };
+		A6BA20401D41762F003037E9 /* MORegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BA203F1D41762F003037E9 /* MORegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,15 +73,19 @@
 		A633F9451D18DC6A00E4B215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A633F94F1D18E16100E4B215 /* AASettingsShelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AASettingsShelf.h; path = Components/AASettingsShelf.h; sourceTree = "<group>"; };
 		A633F9501D18E16100E4B215 /* AASettingsShelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AASettingsShelf.m; path = Components/AASettingsShelf.m; sourceTree = "<group>"; };
-		A67A63FE1D24986E003CC198 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		A67F8B831D1F2CC100D90825 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewController.m; path = ViewControllers/LandingViewController.m; sourceTree = "<group>"; };
-		A67F8B841D1F2CC100D90825 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewController.h; path = ViewControllers/LandingViewController.h; sourceTree = "<group>"; };
+		A67F8B831D1F2CC100D90825 /* MOLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MOLandingViewController.m; path = ViewControllers/MOLandingViewController.m; sourceTree = "<group>"; };
+		A67F8B841D1F2CC100D90825 /* MOLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MOLandingViewController.h; path = ViewControllers/MOLandingViewController.h; sourceTree = "<group>"; };
 		A67F8B861D1F2CCD00D90825 /* PixelOperatorMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PixelOperatorMono.ttf; path = Resources/PixelOperatorMono.ttf; sourceTree = "<group>"; };
 		A67F8B871D1F2CCD00D90825 /* PixelOperatorMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PixelOperatorMono-Bold.ttf"; path = "Resources/PixelOperatorMono-Bold.ttf"; sourceTree = "<group>"; };
 		A67F8B8B1D1F32D500D90825 /* AAJeweledButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAJeweledButton.h; path = Components/AAJeweledButton.h; sourceTree = "<group>"; };
 		A67F8B8C1D1F32D500D90825 /* AAJeweledButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAJeweledButton.m; path = Components/AAJeweledButton.m; sourceTree = "<group>"; };
 		A67F8B8E1D1F464B00D90825 /* UIColor+LightAndDark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+LightAndDark.h"; path = "Components/UIColor+LightAndDark.h"; sourceTree = "<group>"; };
 		A67F8B8F1D1F464B00D90825 /* UIColor+LightAndDark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+LightAndDark.m"; path = "Components/UIColor+LightAndDark.m"; sourceTree = "<group>"; };
+		A6BA203B1D417034003037E9 /* MOLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MOLoginViewController.h; path = ViewControllers/MOLoginViewController.h; sourceTree = "<group>"; };
+		A6BA203C1D417034003037E9 /* MOLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MOLoginViewController.m; path = ViewControllers/MOLoginViewController.m; sourceTree = "<group>"; };
+		A6BA203E1D41762F003037E9 /* MORegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MORegisterViewController.h; path = ViewControllers/MORegisterViewController.h; sourceTree = "<group>"; };
+		A6BA203F1D41762F003037E9 /* MORegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MORegisterViewController.m; path = ViewControllers/MORegisterViewController.m; sourceTree = "<group>"; };
+		A6BA20471D417C1E003037E9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		CFB7584CD6462333CE759389 /* Pods-Match-O.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Match-O.release.xcconfig"; path = "Pods/Target Support Files/Pods-Match-O/Pods-Match-O.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,10 +137,10 @@
 		A6195E251D3C314C00BB9374 /* HTTPModels */ = {
 			isa = PBXGroup;
 			children = (
-				A6195E301D3C3B2D00BB9374 /* MOHTTPUsersManager.m */,
 				A6195E311D3C3B2D00BB9374 /* MOHTTPUsersManager.h */,
-				A6195E321D3C3B2D00BB9374 /* MOHTTPSessionManager.m */,
+				A6195E301D3C3B2D00BB9374 /* MOHTTPUsersManager.m */,
 				A6195E331D3C3B2D00BB9374 /* MOHTTPSessionManager.h */,
+				A6195E321D3C3B2D00BB9374 /* MOHTTPSessionManager.m */,
 			);
 			name = HTTPModels;
 			sourceTree = "<group>";
@@ -142,10 +148,10 @@
 		A6195E291D3C3A8F00BB9374 /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
-				A6195E361D3C3B3900BB9374 /* MOUser+CoreDataProperties.m */,
 				A6195E371D3C3B3900BB9374 /* MOUser+CoreDataProperties.h */,
-				A6195E381D3C3B3900BB9374 /* MOUser.m */,
+				A6195E361D3C3B3900BB9374 /* MOUser+CoreDataProperties.m */,
 				A6195E391D3C3B3900BB9374 /* MOUser.h */,
+				A6195E381D3C3B3900BB9374 /* MOUser.m */,
 			);
 			name = CoreDataModels;
 			sourceTree = "<group>";
@@ -250,8 +256,12 @@
 		A67F8B7B1D1F299B00D90825 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A67F8B841D1F2CC100D90825 /* LandingViewController.h */,
-				A67F8B831D1F2CC100D90825 /* LandingViewController.m */,
+				A67F8B841D1F2CC100D90825 /* MOLandingViewController.h */,
+				A67F8B831D1F2CC100D90825 /* MOLandingViewController.m */,
+				A6BA203B1D417034003037E9 /* MOLoginViewController.h */,
+				A6BA203C1D417034003037E9 /* MOLoginViewController.m */,
+				A6BA203E1D41762F003037E9 /* MORegisterViewController.h */,
+				A6BA203F1D41762F003037E9 /* MORegisterViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -349,6 +359,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = A633F91A1D18DC6900E4B215;
 			productRefGroup = A633F9241D18DC6900E4B215 /* Products */;
@@ -441,6 +452,8 @@
 				A67F8B8D1D1F32D500D90825 /* AAJeweledButton.m in Sources */,
 				A67F8B901D1F464B00D90825 /* UIColor+LightAndDark.m in Sources */,
 				A6195E351D3C3B2D00BB9374 /* MOHTTPSessionManager.m in Sources */,
+				A6BA20401D41762F003037E9 /* MORegisterViewController.m in Sources */,
+				A6BA203D1D417034003037E9 /* MOLoginViewController.m in Sources */,
 				A633F9511D18E16100E4B215 /* AASettingsShelf.m in Sources */,
 				A633F92B1D18DC6900E4B215 /* AppDelegate.m in Sources */,
 				A633F9281D18DC6900E4B215 /* main.m in Sources */,
@@ -448,7 +461,7 @@
 				A633F9341D18DC6900E4B215 /* Match_O.xcdatamodeld in Sources */,
 				A6195E341D3C3B2D00BB9374 /* MOHTTPUsersManager.m in Sources */,
 				A6195E281D3C319100BB9374 /* MOUsersManager.m in Sources */,
-				A67F8B851D1F2CC100D90825 /* LandingViewController.m in Sources */,
+				A67F8B851D1F2CC100D90825 /* MOLandingViewController.m in Sources */,
 				A6195E211D3C274100BB9374 /* KeychainWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +489,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A633F9301D18DC6900E4B215 /* Base */,
-				A67A63FE1D24986E003CC198 /* es */,
+				A6BA20471D417C1E003037E9 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

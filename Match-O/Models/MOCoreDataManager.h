@@ -13,5 +13,11 @@
 @interface MOCoreDataManager : NSObject
 
 + (instancetype)sharedManager;
+- (BOOL) saveContext;
+
+//User related methods
+- (MOUser *) fetchUser;
+- (void) deleteUser:(MOUser *) user;
+
 
 @end

@@ -1,15 +1,30 @@
 
+/* Class = "UILabel"; text = "Bienvenido!"; ObjectID = "Mw0-cX-Mve"; */
+"Mw0-cX-Mve.text" = "Bienvenido!";
+
 /* Class = "UIButton"; normalTitle = "Twitter"; ObjectID = "OE4-D8-0Qm"; */
 "OE4-D8-0Qm.normalTitle" = "Twitter";
 
-/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "RV6-0D-bME"; */
-"RV6-0D-bME.normalTitle" = "Iniciar sesión";
+/* Class = "UIButton"; normalTitle = "Acceder"; ObjectID = "RV6-0D-bME"; */
+"RV6-0D-bME.normalTitle" = "Acceder";
 
 /* Class = "UIButton"; normalTitle = "Toggle me"; ObjectID = "gmk-0P-9F4"; */
 "gmk-0P-9F4.normalTitle" = "Toggle me";
 
-/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "lgN-U6-ygV"; */
+/* Class = "UIButton"; normalTitle = "Cancelar"; ObjectID = "iEX-Qp-8gc"; */
+"iEX-Qp-8gc.normalTitle" = "Cancelar";
+
+/* Class = "UIButton"; normalTitle = "Registro"; ObjectID = "lgN-U6-ygV"; */
 "lgN-U6-ygV.normalTitle" = "Registro";
+
+/* Class = "UITextField"; placeholder = "Usuario"; ObjectID = "mIT-b8-xeD"; */
+"mIT-b8-xeD.placeholder" = "Usuario";
+
+/* Class = "UIButton"; normalTitle = "Acceder"; ObjectID = "oPh-tt-dmJ"; */
+"oPh-tt-dmJ.normalTitle" = "Acceder";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "qaU-cJ-saM"; */
+"qaU-cJ-saM.placeholder" = "Password";
 
 /* Class = "UILabel"; text = "Filter by Name"; ObjectID = "t6G-KH-Rib"; */
 "t6G-KH-Rib.text" = "Filter by Name";

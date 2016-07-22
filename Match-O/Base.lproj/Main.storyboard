@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cYS-Z2-SK5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cYS-Z2-SK5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,11 @@
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="PixelOperatorMono.ttf">
+            <string>PixelOperatorMono</string>
+            <string>PixelOperatorMono</string>
+            <string>PixelOperatorMono</string>
+            <string>PixelOperatorMono</string>
+            <string>PixelOperatorMono</string>
             <string>PixelOperatorMono</string>
             <string>PixelOperatorMono</string>
             <string>PixelOperatorMono</string>
@@ -35,7 +40,7 @@
         <!--Landing View Controller-->
         <scene sceneID="vaI-Q6-x50">
             <objects>
-                <viewController id="e3c-Jn-Z8Z" customClass="LandingViewController" sceneMemberID="viewController">
+                <viewController id="e3c-Jn-Z8Z" customClass="MOLandingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="92F-QX-WFu"/>
                         <viewControllerLayoutGuide type="bottom" id="6Wc-ze-gxU"/>
@@ -57,6 +62,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="e3c-Jn-Z8Z" eventType="touchUpInside" id="b0W-st-dvg"/>
+                                    <segue destination="WhA-rf-G1F" kind="presentation" id="kQ5-rG-Oe4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgN-U6-ygV" customClass="AAJeweledButton">
@@ -167,18 +173,16 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="UbQ-kD-pSQ"/>
-                    <connections>
-                        <segue destination="WhA-rf-G1F" kind="show" id="F2S-DC-PaJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQJ-Oq-IdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Nmd-pC-1Bx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1488" y="381"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="FQp-Bg-GMM">
             <objects>
-                <viewController id="WhA-rf-G1F" sceneMemberID="viewController">
+                <viewController id="WhA-rf-G1F" customClass="MOLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d9g-ft-LqY"/>
                         <viewControllerLayoutGuide type="bottom" id="pUe-Zf-x2B"/>
@@ -186,8 +190,105 @@
                     <view key="view" contentMode="scaleToFill" id="gZa-79-S1F">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXG-4a-H7L" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jp5-lG-K5l">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIT-b8-xeD">
+                                                <rect key="frame" x="40" y="123" width="520" height="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="PixelOperatorMono" family="Pixel Operator Mono" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qaU-cJ-saM">
+                                                <rect key="frame" x="40" y="182" width="520" height="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="PixelOperatorMono" family="Pixel Operator Mono" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPh-tt-dmJ" customClass="AAJeweledButton">
+                                                <rect key="frame" x="320" y="251" width="240" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.71077838559999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Sqs-hP-zMY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PixelOperatorMono" family="Pixel Operator Mono" pointSize="28"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="-8" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginButtonTapped" destination="WhA-rf-G1F" eventType="touchUpInside" id="hdi-yF-Xrq"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mw0-cX-Mve">
+                                                <rect key="frame" x="186" y="45" width="228" height="33"/>
+                                                <fontDescription key="fontDescription" name="PixelOperatorMono" family="Pixel Operator Mono" pointSize="35"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEX-Qp-8gc" customClass="AAJeweledButton">
+                                                <rect key="frame" x="40" y="251" width="240" height="50"/>
+                                                <color key="backgroundColor" red="0.80386461239999996" green="0.04218521645" blue="0.056416629279999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="yZr-Xz-19s"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PixelOperatorMono" family="Pixel Operator Mono" pointSize="28"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="-8" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Nmd-pC-1Bx" kind="unwind" unwindAction="prepareForUnwind:" id="Jdi-wa-PEF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="iEX-Qp-8gc" firstAttribute="centerY" secondItem="oPh-tt-dmJ" secondAttribute="centerY" id="BPL-mB-3Pg"/>
+                                            <constraint firstItem="mIT-b8-xeD" firstAttribute="leading" secondItem="Jp5-lG-K5l" secondAttribute="leading" constant="40" id="C9g-bF-w0A"/>
+                                            <constraint firstItem="mIT-b8-xeD" firstAttribute="centerX" secondItem="Jp5-lG-K5l" secondAttribute="centerX" id="CaQ-Gz-15R"/>
+                                            <constraint firstItem="oPh-tt-dmJ" firstAttribute="top" secondItem="qaU-cJ-saM" secondAttribute="bottom" constant="50" id="Dts-9T-ICW"/>
+                                            <constraint firstItem="Mw0-cX-Mve" firstAttribute="centerX" secondItem="Jp5-lG-K5l" secondAttribute="centerX" id="FV3-rO-l1m"/>
+                                            <constraint firstItem="Mw0-cX-Mve" firstAttribute="top" secondItem="Jp5-lG-K5l" secondAttribute="top" constant="45" id="GC8-Y4-GKz"/>
+                                            <constraint firstItem="iEX-Qp-8gc" firstAttribute="width" secondItem="oPh-tt-dmJ" secondAttribute="width" id="LZO-Is-yGM"/>
+                                            <constraint firstItem="qaU-cJ-saM" firstAttribute="leading" secondItem="mIT-b8-xeD" secondAttribute="leading" id="MPM-oI-rTg"/>
+                                            <constraint firstItem="qaU-cJ-saM" firstAttribute="trailing" secondItem="mIT-b8-xeD" secondAttribute="trailing" id="Rvo-4I-lDu"/>
+                                            <constraint firstItem="mIT-b8-xeD" firstAttribute="top" secondItem="Mw0-cX-Mve" secondAttribute="bottom" constant="45" id="ZBN-dd-Bq8"/>
+                                            <constraint firstAttribute="trailing" secondItem="oPh-tt-dmJ" secondAttribute="trailing" constant="40" id="dvS-lb-85e"/>
+                                            <constraint firstItem="oPh-tt-dmJ" firstAttribute="leading" secondItem="iEX-Qp-8gc" secondAttribute="trailing" constant="40" id="frs-cv-32L"/>
+                                            <constraint firstItem="iEX-Qp-8gc" firstAttribute="leading" secondItem="Jp5-lG-K5l" secondAttribute="leading" constant="40" id="i1M-j7-YQT"/>
+                                            <constraint firstItem="qaU-cJ-saM" firstAttribute="top" secondItem="mIT-b8-xeD" secondAttribute="bottom" constant="40" id="kb7-py-Bq5"/>
+                                            <constraint firstAttribute="trailing" secondItem="mIT-b8-xeD" secondAttribute="trailing" constant="40" id="oLC-KW-8MO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Jp5-lG-K5l" firstAttribute="top" secondItem="zXG-4a-H7L" secondAttribute="top" id="5bp-4Q-58E"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jp5-lG-K5l" secondAttribute="trailing" id="9Yu-Od-VwB"/>
+                                    <constraint firstItem="Jp5-lG-K5l" firstAttribute="leading" secondItem="zXG-4a-H7L" secondAttribute="leading" id="I0C-wX-hFw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jp5-lG-K5l" secondAttribute="bottom" id="zkG-Yd-BKL"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.62226310579999999" green="0.1950473305" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pUe-Zf-x2B" firstAttribute="top" secondItem="zXG-4a-H7L" secondAttribute="bottom" id="244-j4-xdb"/>
+                            <constraint firstAttribute="trailing" secondItem="zXG-4a-H7L" secondAttribute="trailing" id="BmM-7b-YQz"/>
+                            <constraint firstItem="Jp5-lG-K5l" firstAttribute="width" secondItem="gZa-79-S1F" secondAttribute="width" id="LjD-SO-JIE"/>
+                            <constraint firstItem="zXG-4a-H7L" firstAttribute="top" secondItem="gZa-79-S1F" secondAttribute="top" id="P2B-3M-nLt"/>
+                            <constraint firstItem="Jp5-lG-K5l" firstAttribute="height" secondItem="gZa-79-S1F" secondAttribute="height" id="a2a-F7-56o"/>
+                            <constraint firstItem="zXG-4a-H7L" firstAttribute="leading" secondItem="gZa-79-S1F" secondAttribute="leading" id="sgF-xU-06P"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="passwordTextfield" destination="qaU-cJ-saM" id="8TW-JX-CLn"/>
+                        <outlet property="usernameTextfield" destination="mIT-b8-xeD" id="qCT-XC-4wE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHu-Kk-p8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
